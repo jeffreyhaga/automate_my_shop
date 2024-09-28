@@ -3,5 +3,4 @@ class Flow < ApplicationRecord
   validates :file, presence: true
   validates :title, presence: true
   validates :description, presence: true
-  #validates :file, presence: true
 end

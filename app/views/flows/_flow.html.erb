@@ -9,10 +9,9 @@
     <%= flow.description %>
   </p>
 
-  <p>
-      <strong>File:</strong>
+  <p class="card-text">
       <% if flow.file.attached? %>
-        <%= link_to 'Download File', rails_blob_path(flow.file, disposition: 'attachment'), class: "btn btn-link" %>
+        <span>📎</span> <%= link_to 'Download File', rails_blob_path(flow.file, disposition: 'attachment') %>
       <% else %>
         <span>No file attached.</span>
       <% end %>

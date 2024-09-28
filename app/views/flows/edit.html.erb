@@ -1,10 +1,10 @@
-<h1>Editing flow</h1>
+<h1>Editing Flow: <%= @flow.title %></h1>
 
 <%= render "form", flow: @flow %>
 
 <br>
 
 <div>
-  <%= link_to "Show this flow", @flow %> |
-  <%= link_to "Back to flows", flows_path %>
+  <%= link_to "Cancel", @flow %> |
+  <%= link_to "All Flows", flows_path %>
 </div>
