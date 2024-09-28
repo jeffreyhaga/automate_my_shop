@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="row">
+    <div class="col-sm-6 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title"><%= @flow.title %></h5>
+                <p class="card-text"><%= @flow.description %></p>
+                <p class="card-text">
+                    <%= link_to 'Download File', rails_blob_path(@flow.file, disposition: 'attachment') %>
+                </p>
+                <div>
+                    <%= link_to "Edit", edit_flow_path(@flow), class: "btn btn-primary" %>
+                    <%= link_to "Back to flows", flows_path, class: "btn btn-secondary" %>
+                    <%= button_to "Delete this flow", @flow, method: :delete, class: "btn btn-danger mt-1" %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

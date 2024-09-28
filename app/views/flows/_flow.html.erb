@@ -1,0 +1,21 @@
+<div id="<%= dom_id flow %>">
+  <p class="card-title">
+    <strong>Title:</strong>
+    <%= flow.title %>
+  </p>
+
+  <p class="card-text">
+    <strong>Description:</strong>
+    <%= flow.description %>
+  </p>
+
+  <p>
+      <strong>File:</strong>
+      <% if flow.file.attached? %>
+        <%= link_to 'Download File', rails_blob_path(flow.file, disposition: 'attachment'), class: "btn btn-link" %>
+      <% else %>
+        <span>No file attached.</span>
+      <% end %>
+    </p>
+
+</div>
