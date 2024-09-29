@@ -69,3 +69,9 @@ end
 gem "litestack", "~> 0.4.3"
 
 gem "dockerfile-rails", ">= 1.6", :group => :development
+
+gem "devise"
+
+gem "devise-passwordless", "~> 1.0"
+
+gem "letter_opener", group: :development

@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: { sessions: "devise/passwordless/sessions" }
+
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/passwordless/sessions#destroy'
+ end
+
   resources :flows
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
