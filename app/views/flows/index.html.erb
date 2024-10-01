@@ -3,7 +3,6 @@
 <h1>Shopify Flow Templates Marketplace</h1>
 <p>Easily find new Shopify Flow templates for your store or upload and share your own.</p>
 
-<%= link_to "New flow", new_flow_path, class: "btn btn-primary" %>
 
 <div class="row mt-3">
     <% @flows.each do |flow| %>
@@ -14,6 +13,9 @@
                     <p>
                         <%= link_to "Show", flow %>
                     </p>
+                    <small>
+                        by user #<%= flow.user_id %>
+                    </small>
                 </div>
             </div>
         </div>

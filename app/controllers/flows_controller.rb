@@ -1,4 +1,5 @@
 class FlowsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show] # Ensure the user is logged in
   before_action :set_flow, only: %i[ show edit update destroy ]
 
   # GET /flows or /flows.json
@@ -22,7 +23,7 @@ class FlowsController < ApplicationController
 
   # POST /flows or /flows.json
   def create
-    @flow = Flow.new(flow_params)
+    @flow = current_user.flows.build(flow_params) # Associate flow with current_user
 
     respond_to do |format|
       if @flow.save

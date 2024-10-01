@@ -1,6 +1,7 @@
 # Tasks
 
-- Associate users to flows
+- connect ActionStorage to cloud service
 - add Upvote system
+- filter flows by recent or most liked
 - add comments model
 - fill out how it works sections

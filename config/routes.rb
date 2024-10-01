@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'pages/how_it_works'
   devise_for :users, controllers: { sessions: "devise/passwordless/sessions" }
 
   devise_scope :user do

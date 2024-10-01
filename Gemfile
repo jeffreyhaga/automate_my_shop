@@ -75,3 +75,5 @@ gem "devise"
 gem "devise-passwordless", "~> 1.0"
 
 gem "letter_opener", group: :development
+
+gem 'active_storage_validations'
