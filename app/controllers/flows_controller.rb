@@ -1,7 +1,7 @@
 class FlowsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show] # Ensure the user is logged in
   before_action :set_flow, only: %i[ show edit update destroy ]
-  before_action :authorize_user!, only: [:destroy]
+  before_action :authorize_user!, only: [:destroy, :edit]
 
   # GET /flows or /flows.json
   def index
@@ -73,7 +73,7 @@ class FlowsController < ApplicationController
 
     def authorize_user!
       unless @flow.user == current_user
-        redirect_to flows_path, notice: 'You are not authorized to delete this flow'
+        redirect_to flows_path, notice: 'You are not authorized to edit or delete this flow.'
       end
     end
 end

@@ -1,3 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+h1 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  letter-spacing: -0.96px !important;
+}
+
+p,
+a,
+li {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #f8f8f9 !important;
+}
+
+.navbar-brand {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+}
+
+.navbar-expand-lg {
+  border-color: #f8f8f9 !important;
+  border-bottom: 1px solid rgb(230, 230, 230) !important;
+}
+
+.btn {
+  padding: 6px, 12px;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0rem -0.0625rem 0rem 0.0625rem rgba(0, 0, 0, 0.8) inset,
+    0rem 0rem 0rem 0.0625rem rgba(48, 48, 48, 1) inset,
+    0rem 0.03125rem 0rem 0.09375rem rgba(255, 255, 255, 0.25) inset;
+  touch-action: manipulation;
+}
+
+.btn-primary {
+  background-color: #303030;
+}
+
+.btn-primary:hover {
+  background-color: #5433eb;
+}
+
+.btn-danger {
+  background-color: #c31d1d;
+}
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
