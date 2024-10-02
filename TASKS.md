@@ -1,6 +1,5 @@
 # Tasks
 
-- connect ActionStorage to cloud service
 - add Upvote system
 - filter flows by recent or most liked
 - add comments model
