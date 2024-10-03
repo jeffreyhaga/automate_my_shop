@@ -213,6 +213,7 @@ GEM
       ostruct (>= 0.2)
     orm_adapter (0.5.0)
     ostruct (0.6.0)
+    pg (1.5.8)
     psych (5.1.2)
       stringio
     public_suffix (6.0.1)
@@ -348,11 +349,11 @@ DEPENDENCIES
   jbuilder
   letter_opener
   litestack (~> 0.4.3)
+  pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.1.4)
   selenium-webdriver
   sprockets-rails
-  sqlite3 (>= 1.4)
   stimulus-rails
   turbo-rails
   tzinfo-data
