@@ -104,8 +104,8 @@ Rails.application.configure do
     :authentication => :plain,
     :address => "smtp.mailgun.org",
     :port => 587,
-    :domain => "sandbox8fc0f2c432ee44b5ae22dbd63035ce8d.mailgun.org",
-    :user_name => "jeff@sandbox8fc0f2c432ee44b5ae22dbd63035ce8d.mailgun.org",
-    :password => "pxy1mpc-UBV4yng4btz"
+    :domain => Rails.application.credentials.dig(:mailgun, :domain),
+    :user_name => Rails.application.credentials.dig(:mailgun, :user_name),
+    :password => Rails.application.credentials.dig(:mailgun, :password)
   }
 end
