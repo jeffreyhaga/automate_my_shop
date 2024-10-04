@@ -1,9 +1,11 @@
 # Tasks
 
-- switch to postgres for DB
+- add like system
+- filter flows by recent or most liked
 - deploy to render
 - setup mailgun
-- add Upvote system
-- filter flows by recent or most liked
+
+later
+
 - add comments model
 - fill out how it works sections

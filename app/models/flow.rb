@@ -5,9 +5,9 @@ class Flow < ApplicationRecord
   #Associations
   belongs_to :user
 
-  #Valdidations
+   #Valdidations
   #validates :file, presence: true, content_type:{ in: ['text/flow'], message: "Must be .flow file type" }
-  validates :title, presence: true
-  validates :description, presence: true
-
+  validates :title, presence: true, on: :create
+  validates :description, presence: true, on: :create
+  validates :file, presence: true, on: :create
 end

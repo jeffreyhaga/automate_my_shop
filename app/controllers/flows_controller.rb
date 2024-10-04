@@ -20,6 +20,7 @@ class FlowsController < ApplicationController
 
   # GET /flows/1/edit
   def edit
+    @flow = Flow.find(params[:id])
   end
 
   # POST /flows or /flows.json
