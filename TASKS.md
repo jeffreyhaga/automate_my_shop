@@ -1,9 +1,10 @@
 # Tasks
 
+- setup mailgun
+- buy and connect custom domain
+- analytics?
 - add like system
 - filter flows by recent or most liked
-- deploy to render
-- setup mailgun
 
 later
 
