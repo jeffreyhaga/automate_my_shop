@@ -83,3 +83,4 @@ production:
   database: automate_my_shop_production
   username: automate_my_shop
   password: <%= ENV["AUTOMATE_MY_SHOP_DATABASE_PASSWORD"] %>
+  prepared_statements: false
