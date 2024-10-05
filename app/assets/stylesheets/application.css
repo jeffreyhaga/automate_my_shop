@@ -25,6 +25,15 @@ body {
   border-bottom: 1px solid rgb(230, 230, 230) !important;
 }
 
+.card {
+  transition: border 0.3s ease;
+  border: 2px solid grey;
+}
+
+.card:hover {
+  border: 2px solid #5433eb; /* Adds the hover border effect */
+}
+
 .btn {
   padding: 6px, 12px;
   border: none;
@@ -45,6 +54,18 @@ body {
 
 .btn-danger {
   background-color: #c31d1d;
+}
+
+.no-underline {
+  text-decoration: none !important;
+}
+
+.purple {
+  background-color: #5433eb !important;
+}
+
+.purple:hover {
+  background-color: #7a5df0;
 }
 
 /*

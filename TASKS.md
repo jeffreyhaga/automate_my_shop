@@ -2,7 +2,7 @@
 
 - setup mailgun
 - buy and connect custom domain
-- analytics?
+- analytics? plausible
 - add like system
 - filter flows by recent or most liked
 
