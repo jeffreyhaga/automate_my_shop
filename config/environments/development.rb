@@ -75,11 +75,23 @@ Rails.application.configure do
   config.action_controller.raise_on_missing_callback_actions = true
 
   #for Devise
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  #config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   #for letteropener gem
-  config.action_mailer.delivery_method = :letter_opener
+  #config.action_mailer.delivery_method = :letter_opener
+  #config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options = { host: 'automatemyshop.onrender.com', protocol: 'https' }
   config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :authentication => :plain,
+    :address => "smtp.mailgun.org",
+    :port => 587,
+    :domain => Rails.application.credentials.dig(:mailgun, :domain),
+    :user_name => Rails.application.credentials.dig(:mailgun, :user_name),
+    :password => Rails.application.credentials.dig(:mailgun, :password)
+  }
 
 end
