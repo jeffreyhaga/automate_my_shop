@@ -95,7 +95,7 @@ Rails.application.configure do
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
   # Ensure emails are sent in production
-  config.action_mailer.default_url_options = { host: 'automatemyshop.onrender.com', protocol: 'https' }
+  config.action_mailer.default_url_options = { host: 'automatemyshop.com', protocol: 'https' }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
 
