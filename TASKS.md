@@ -1,10 +1,10 @@
 # Tasks
 
+- 404 page
 - setup mailgun
-- buy and connect custom domain
-- analytics? plausible
 - add like system
 - filter flows by recent or most liked
+- search
 
 later
 

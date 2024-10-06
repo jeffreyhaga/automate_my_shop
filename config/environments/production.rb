@@ -102,10 +102,10 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :authentication => :plain,
-    :address => "smtp.mailgun.org",
+    :address => "smtp.mailersend.nete",
     :port => 587,
-    :domain => Rails.application.credentials.dig(:mailgun, :domain),
-    :user_name => Rails.application.credentials.dig(:mailgun, :user_name),
-    :password => Rails.application.credentials.dig(:mailgun, :password)
+    :domain => Rails.application.credentials.dig(:mailersend, :domain),
+    :user_name => Rails.application.credentials.dig(:mailersend, :user_name),
+    :password => Rails.application.credentials.dig(:mailersend, :password)
   }
 end
