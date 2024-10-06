@@ -10,7 +10,7 @@ class FlowsController < ApplicationController
 
   # GET /flows/1 or /flows/1.json
   def show
-    @flow
+    @flow or not_found!
   end
 
   # GET /flows/new
