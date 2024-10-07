@@ -3,20 +3,15 @@
 <h1 class="fs-1 fw-bold">Shopify Flow Templates Marketplace</h1>
 <p>Easily find new Shopify Flow templates for your store or upload and share your own.</p>
 
-
-<div class="row mt-3">
-  <% @flows.each do |flow| %>
-    <div class="col-sm-4 mb-3">
-      <div class="card h-100">
-        <%= link_to flow_path(flow), class: "stretched-link text-decoration-none text-dark" do %>
-          <div class="card-body">
-            <%= render flow %>
-           <!-- <p class="btn btn-secondary me-2 mt-2">
-              Show
-            </p> -->
-          </div>
-        <% end %>
-      </div>
+<div class="mt-5 col-md-6">
+  <%= form_with(url: flows_path, method: :get, data: { controller: "search-form", turbo_frame: "flows" }) do |form| %>
+    <div class="d-flex">
+      <%= form.text_field :query, class: "form-control me-2 w-100 w-md-50 w-lg-25", data: { action: "input->search-form#search" } %>
+      <%= form.submit "Search", class: "btn btn-primary" %>
     </div>
   <% end %>
 </div>
+
+<turbo-frame id="flows">
+  <%= render partial: "flows", locals: { flows: @flows } %>  <!-- Initial rendering of flows -->
+</turbo-frame>

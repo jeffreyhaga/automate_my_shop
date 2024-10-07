@@ -1,10 +1,11 @@
 # Tasks
 
-- 404 page
+- search
 - setup mailgun
+- email forwarding
 - add like system
 - filter flows by recent or most liked
-- search
+- footer
 
 later
 

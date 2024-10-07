@@ -1,20 +1,22 @@
-<div id="<%= dom_id flow %>">
-  <p class="card-title fw-bold">
-    <%= flow.title %>
-  </p>
 
-  <p class="card-text">
-    <%= flow.description %>
-  </p>
 
-<% if controller_name == 'flows' && action_name == 'show' %>
-  <p class="card-text btn btn-primary me-2">
-      <% if flow.file.attached? %>
-        <%= link_to 'Download', rails_blob_path(flow.file, disposition: 'attachment'), class: "text-white no-underline" %>
-      <% else %>
-        <span>No file attached.</span>
-      <% end %>
+  <div id="<%= dom_id flow %>">
+    <p class="card-title fw-bold">
+      <%= flow.title %>
     </p>
-<% end %>
 
-</div>
+    <p class="card-text">
+      <%= flow.description %>
+    </p>
+
+  <% if controller_name == 'flows' && action_name == 'show' %>
+    <p class="card-text btn btn-primary me-2">
+        <% if flow.file.attached? %>
+          <%= link_to 'Download', rails_blob_path(flow.file, disposition: 'attachment'), class: "text-white no-underline" %>
+        <% else %>
+          <span>No file attached.</span>
+        <% end %>
+      </p>
+  <% end %>
+
+  </div>

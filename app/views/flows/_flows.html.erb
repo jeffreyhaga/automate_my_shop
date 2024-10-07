@@ -1,0 +1,17 @@
+<div class="row mt-3">
+  <% if flows.any? %>
+    <% flows.each do |flow| %>
+      <div class="col-sm-4 mb-3">
+        <div class="card h-100">
+          <%= link_to flow_path(flow), class: "stretched-link text-decoration-none text-dark" do %>
+            <div class="card-body">
+              <%= render flow %>  <!-- Partial to render each flow -->
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  <% else %>
+   <p>No results found. Search again or go back <%= link_to "home", flows_path %>.</p>
+  <% end %>
+</div>
