@@ -23,7 +23,7 @@
 
   <div class="mt-1 col-md-6">
       <%= form.label :file, style: "display:block", class: "form-label" %>
-      <%= form.file_field :file, class: "form-control", required: true %>
+      <%= form.file_field :file, class: "form-control", required: true, accept: ".flow" %>
       <div id="fileHelp" class="form-text">Export your .flow file from Shopify by following <a href="https://help.shopify.com/en/manual/shopify-flow/manage#export-a-workflow"> these steps.</a></div>
   </div>
 
