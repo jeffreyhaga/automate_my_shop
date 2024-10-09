@@ -11,6 +11,8 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <script defer data-domain="automatemyshop.com" src="https://plausible.io/js/script.file-downloads.js"></script>
     <%= favicon_link_tag asset_path('gear.webp') %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
   </head>
   <body>
   <%= render "shared/nav" %>
