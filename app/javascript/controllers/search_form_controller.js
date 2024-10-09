@@ -2,7 +2,12 @@ import { Controller } from "@hotwired/stimulus";
 
 // Connects to data-controller="search-form"
 export default class extends Controller {
+  static targets = ["form", "input", "output"];
+
   search() {
-    console.log("Search triggered");
+    clearTimeout(this.timeout);
+    this.timeout = setTimeout(() => {
+      this.formTarget.requestSubmit();
+    }, 200);
   }
 }

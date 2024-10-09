@@ -5,19 +5,19 @@ class FlowsController < ApplicationController
 
   # GET /flows or /flows.json
   def index
-    # Search logic
+    Rails.logger.info "Received search request with query: #{params[:query]}"
+    
     if params[:query].present?
       @flows = Flow.where("title LIKE ? OR description LIKE ?", "%#{params[:query]}%", "%#{params[:query]}%")
     else
       @flows = Flow.all
     end
 
-    # Respond to Turbo Stream or HTML requests
     respond_to do |format|
+      format.html
       format.turbo_stream do
-        render partial: "flows", locals: { flows: @flows }
+        render turbo_stream: turbo_stream.update("flows", partial: "flows", locals: { flows: @flows })
       end
-      format.html  # Will render `index.html.erb` automatically if requested via HTML
     end
   end
 

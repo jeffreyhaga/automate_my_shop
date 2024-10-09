@@ -3,15 +3,27 @@
 <h1 class="fs-1 fw-bold">Shopify Flow Templates Marketplace</h1>
 <p>Easily find new Shopify Flow templates for your store or upload and share your own.</p>
 
-<div class="mt-5 col-md-6">
-  <%= form_with(url: flows_path, method: :get, data: { controller: "search-form", turbo_frame: "flows" }) do |form| %>
-    <div class="d-flex">
-      <%= form.text_field :query, class: "form-control me-2 w-100 w-md-50 w-lg-25", data: { action: "input->search-form#search" } %>
-      <%= form.submit "Search", class: "btn btn-primary" %>
-    </div>
-  <% end %>
+<div data-controller="search-form">
+  <div class="mt-5 col-md-6">
+    <%= form_with(url: flows_path, method: :get, data: { 
+      search_form_target: "form",
+      turbo_frame: "flows",
+      turbo_action: "advance"
+    }) do |form| %>
+      <div class="d-flex">
+        <%= form.text_field :query, 
+          class: "form-control me-2 w-100 w-md-50 w-lg-25", 
+          data: { 
+            search_form_target: "input",
+            action: "input->search-form#search"
+          } %>
+        <%= form.submit "Search", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+  <div data-search-form-target="output"></div>
 </div>
 
 <turbo-frame id="flows">
-  <%= render partial: "flows", locals: { flows: @flows } %>  <!-- Initial rendering of flows -->
+  <%= render partial: "flows", locals: { flows: @flows } %>
 </turbo-frame>
