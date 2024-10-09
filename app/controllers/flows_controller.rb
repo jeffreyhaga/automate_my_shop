@@ -23,7 +23,7 @@ class FlowsController < ApplicationController
 
   # GET /flows/1 or /flows/1.json
   def show
-    @flow or not_found!
+    @flow = Flow.friendly.find(params[:id])
   end
 
   # GET /flows/new
@@ -33,7 +33,7 @@ class FlowsController < ApplicationController
 
   # GET /flows/1/edit
   def edit
-    @flow = Flow.find(params[:id])
+    @flow = Flow.friendly.find(params[:id])
   end
 
   # POST /flows or /flows.json
@@ -77,7 +77,7 @@ class FlowsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_flow
-      @flow = Flow.find(params[:id])
+      @flow = Flow.friendly.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.

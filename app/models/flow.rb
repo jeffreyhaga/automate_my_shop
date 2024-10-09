@@ -1,5 +1,12 @@
 class Flow < ApplicationRecord
 
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
+  def to_param
+    slug
+  end
+
   has_one_attached :file
 
   #Associations

@@ -79,3 +79,5 @@ gem "letter_opener", group: :development
 gem 'active_storage_validations'
 
 gem "aws-sdk-s3", "~> 1.166"
+
+gem "friendly_id"

@@ -136,6 +136,8 @@ GEM
       rails (>= 3.0.0)
     drb (2.2.1)
     erubi (1.13.0)
+    friendly_id (5.5.1)
+      activerecord (>= 4.0.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
     hanami-router (0.6.2)
@@ -345,6 +347,7 @@ DEPENDENCIES
   devise
   devise-passwordless (~> 1.0)
   dockerfile-rails (>= 1.6)
+  friendly_id
   importmap-rails
   jbuilder
   letter_opener
