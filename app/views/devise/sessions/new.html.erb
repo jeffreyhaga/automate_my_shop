@@ -14,7 +14,7 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in", class: "btn btn-primary mt-3" %>
+    <%= f.submit "Log in", class: "btn btn-primary mt-3", params: { redirect_to: flows_path } %>
   </div>
 <% end %>
 
