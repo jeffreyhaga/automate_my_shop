@@ -1,6 +1,6 @@
 <h2>Log in</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<%= form_with(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field col-md-3">
     <%= f.label :email, class: "form-label" %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
@@ -14,7 +14,7 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in", class: "btn btn-primary mt-3", params: { redirect_to: flows_path } %>
+    <%= f.submit "Log in", class: "btn btn-primary mt-3" %>
   </div>
 <% end %>
 
