@@ -9,7 +9,7 @@
       <% if controller_name == 'flows' && action_name == 'show' %>
         <%= flow.description %>
       <% else %>
-        <%= truncate(flow.description, length: 100) %>
+        <%= truncate(flow.description, length: 170) %>
       <% end %>
     </p>
 
