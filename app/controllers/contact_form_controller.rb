@@ -8,7 +8,7 @@ class ContactFormController < ApplicationController
     if @contact.save
       # send email notification to site owner
       ContactMailer.contact_email(@contact).deliver_now
-      redirect_to root_path, notice: 'Thank you for your message!'
+      redirect_to flows_path, notice: 'Thank you for your message!'
     else
       render :index
     end
