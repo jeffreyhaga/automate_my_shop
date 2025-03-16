@@ -1,9 +1,9 @@
 source "https://rubygems.org"
 
-ruby "3.3.0"
+ruby "3.4.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.1.4"
+gem "rails", "~> 8.0.1"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -66,8 +66,6 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "litestack", "~> 0.4.3"
-
 gem "dockerfile-rails", ">= 1.6", :group => :development
 
 gem "devise"
@@ -81,3 +79,5 @@ gem 'active_storage_validations'
 gem "aws-sdk-s3", "~> 1.166"
 
 gem "friendly_id"
+
+gem "sqlite3", "~> 2.1"
